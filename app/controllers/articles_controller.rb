@@ -1,2 +1,4 @@
-class ArticleController < ApplicationController
+class ArticlesController < ApplicationController
+  def show
+  end
 end
