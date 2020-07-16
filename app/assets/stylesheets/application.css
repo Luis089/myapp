@@ -15,7 +15,7 @@
  */
 
 .navbar {
-    background-color: #FDF6EA !important;
+    background-color: black !important;
 }
 
 .navbar-brand {
@@ -27,6 +27,6 @@
     color: white !important;
 }
 
-h1 {
-    color: red;
+.navbar-light .navbar-nav .nav-link .navbar-nav .active>.nav-link, h1 {
+    color: grey !important;
 }
