@@ -20,6 +20,11 @@
 
 .navbar-brand {
     font-size: 3rem;
+    color: white;
+}
+
+.navbar-light .navbar-link {
+    color: white;
 }
 
 h1 {
