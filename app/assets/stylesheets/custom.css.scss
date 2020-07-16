@@ -1,1 +1,19 @@
 @import 'bootstrap/dist/css/bootstrap';
+
+
+.navbar {
+    background-color: black !important;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    color: white !important;
+}
+
+.navbar-light .navbar-link {
+    color: white !important;
+}
+
+.navbar-light .navbar-nav .nav-link .navbar-nav {
+    color: grey !important;
+}
