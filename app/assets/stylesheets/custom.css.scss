@@ -1,19 +1,62 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+#home-container{
+    margin-top: 25px;
+}
 
+#logo:hover{
+ color: #fff;
+  text-decoration: none;
+}
 .navbar {
     background-color: black !important;
 }
 
-.navbar-brand {
-    font-size: 3rem;
-    color: white !important;
-}
-
-.navbar-light .navbar-link {
-    color: white !important;
-}
-
-.navbar-light .navbar-nav .nav-link .navbar-nav {
+.nav-link{
     color: grey !important;
 }
+
+.jumbotron {
+    background-image: asset-url("writing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+.jumbotron h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.jumbotron p {
+    color:white;
+}
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+   background-color:lightgrey; 
+  
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
