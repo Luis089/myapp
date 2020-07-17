@@ -1,8 +1,40 @@
-<h1>Showing article details</h1>
-
-<p><strong>Title: </strong><%=@article.title %></p>
-<p><strong>Description: </strong><%=@article.description %></p>
-
-<%=link_to 'Edit', edit_article_path(@article)%> |
-<%=link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }  %> |
-<%=link_to 'Return to articles listing', articles_path%>
+<h1 class="text-center mt-4">Showing article details</h1>
+<div id="page-content">
+    <div id="page-content">
+        <div class="row justify-content-md-center">
+            <div class="col-8 mt-4">
+                <div class="card text-center shadow mb-5 bg-white rounded">
+                    <div class="card-header font-italic">
+                        by Luis Holzer
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= @article.title%>
+                        </h5>
+                        <p class="card-text"><%=@article.description%></p>
+                        <%=link_to 'Back to Articles',  articles_path, class: "btn btn-outline-success"%>
+                        <%=link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"%>
+                        <%=link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger"%>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <small>Created <%= time_ago_in_words(@article.created_at) %> ago -
+                            Edited <%= time_ago_in_words(@article.updated_at) %> ago
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">View Article</li>
+        </ol>
+    </nav>
+    <div class="container text-center">
+        <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
+    </div>
+</footer>

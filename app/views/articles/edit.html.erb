@@ -1,5 +1,20 @@
-<h1>Edit article</h1>
-<%= render 'error_messages'%>
-<%= render 'form'%>
+<h1 class="text-center mt-4">Edit article</h1>
+<div id="page-content">
+    <%= render 'error_messages'%>
+    <%= render 'form', class: "justify-content-md-center"%>
 
-<%=link_to 'Cancel edit', articles_path%>
+    <%=link_to 'Cancel edit', articles_path, class: "btn btn-outline-success"%>
+</div>
+
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Article</li>
+        </ol>
+    </nav>
+    <div class="container text-center">
+        <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
+    </div>
+</footer>
