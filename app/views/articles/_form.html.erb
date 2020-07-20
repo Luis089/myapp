@@ -1,15 +1,22 @@
-<%= form_with(model: @article, local: true)  do |f| %>
-<div class="form-group row">
-    <%= f.label :title, class:"col-2 col-form-label" %>
-    <div class="col-10">
-        <%= f.text_field :title, class: "form-control" %>
+<div class="row justify-content-center">
+    <%= form_with(model: @article, local: true)  do |f| %>
+    <div class="form-group row">
+        <%= f.label :title, class:"col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_field :title, class: "form-control" %>
+        </div>
     </div>
-</div>
-<div class="form-group row">
-    <%= f.label :description, class:"col-2 col-form-label" %>
-    <div class="col-10">
-        <%= f.text_area :description, rows:8, class: "form-control" %>
+    <div class="form-group row">
+        <%= f.label :description, class:"col-2 col-form-label" %>
+        <div class="col-10">
+            <%= f.text_area :description, rows:8, class: "form-control" %>
+        </div>
     </div>
+    <div class="form-group row">
+        <div class="col-12">
+            <%=f.submit class:"btn btn-outline-info btn-lg"%>
+        </div>
+    </div>
+    <% end %>
+    <%=link_to 'Return to articles listing', articles_path, class: "btn btn-outline-success"%>
 </div>
-<button type=" submit" class="btn btn-outline-info">Submit</button>
-<% end %>
