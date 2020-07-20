@@ -1,6 +1,5 @@
 <h1 class="text-center mt-4">Create a new article</h1>
 <div id="page-content">
-    <%= render 'error_messages'%>
     <div class="row justify-content-md-center">
         <div class="col-8 mt-4">
             <div class="card text-center shadow mb-3 bg-white rounded">
@@ -17,16 +16,16 @@
     <div class="row justify-content-md-center mb-3">
         <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-success"%>
     </div>
-    <footer id="sticky-footer" class="bg-dark text-white">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
-                <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
-                <li class="breadcrumb-item active" aria-current="page">Create Article</li>
-            </ol>
-        </nav>
-        <div class="container text-center">
-            <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
-        </div>
-    </footer>
 </div>
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Article</li>
+        </ol>
+    </nav>
+    <div class="container text-center">
+        <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
+    </div>
+</footer>

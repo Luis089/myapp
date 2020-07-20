@@ -1,27 +1,29 @@
 <h1 class="text-center mt-4">Showing article details</h1>
 <div id="page-content">
-    <div id="page-content">
-        <div class="row justify-content-md-center">
-            <div class="col-8 mt-4">
-                <div class="card text-center shadow mb-5 bg-white rounded">
-                    <div class="card-header font-italic">
-                        by Luis Holzer
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <%= @article.title%>
-                        </h5>
-                        <p class="card-text"><%=@article.description%></p>
-                        <%=link_to 'Back to Articles',  articles_path, class: "btn btn-outline-success"%>
-                        <%=link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"%>
-                        <%=link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger"%>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <small>Created <%= time_ago_in_words(@article.created_at) %> ago -
-                            Edited <%= time_ago_in_words(@article.updated_at) %> ago
-                        </small>
-                    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-8 mt-4">
+            <div class="card text-center shadow mb-3 bg-white rounded">
+                <div class="card-header font-italic">
+                    by Luis Holzer
                 </div>
+                <div class="card-body mb-3">
+                    <h5 class="card-title">
+                        <%= @article.title%>
+                    </h5>
+                    <p><%=@article.description%></p>
+                </div>
+                <div class="mb-3">
+                    <%=link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"%>
+                    <%=link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger"%>
+                </div>
+                <div class="card-footer text-muted">
+                    <small>Created <%= time_ago_in_words(@article.created_at) %> ago -
+                        Edited <%= time_ago_in_words(@article.updated_at) %> ago
+                    </small>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-success mb-3"%>
             </div>
         </div>
     </div>
@@ -31,7 +33,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
             <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">View Article</li>
+            <li class="breadcrumb-item active" aria-current="page">Show Article</li>
         </ol>
     </nav>
     <div class="container text-center">
