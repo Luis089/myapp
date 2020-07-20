@@ -29,7 +29,7 @@
 }
 
 .jumbotron {
-    background-image: asset-url("writing.jpg");
+    background-image: asset-url("coffee.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,3 +64,19 @@ body {
   flex-shrink: none;
 }
 
+#card-header{
+  color: rgb(224, 224, 224);
+  background-color: #343a40
+}
+#card-header-new{
+  padding: 1.3rem;
+  color: rgb(224, 224, 224);
+  background-color: #343a40
+}
+#card-footer{
+  color: rgb(224, 224, 224);
+}
+#card-footer-new{
+  padding: 1.3rem;
+  color: rgb(224, 224, 224);
+}
