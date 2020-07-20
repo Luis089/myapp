@@ -1,14 +1,15 @@
 <%= form_with(model: @article, local: true)  do |f| %>
-<p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title %>
-</p>
-<p>
-    <%= f.label :description %> <br>
-    <%= f.text_area :description %>
-</p>
-<p>
-    <button type="submit" class="btn btn-outline-info">Submit</button>
-</p>
-
+<div class="form-group row">
+    <%= f.label :title, class:"col-2 col-form-label" %>
+    <div class="col-10">
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
+</div>
+<div class="form-group row">
+    <%= f.label :description, class:"col-2 col-form-label" %>
+    <div class="col-10">
+        <%= f.text_area :description, rows:8, class: "form-control" %>
+    </div>
+</div>
+<button type=" submit" class="btn btn-outline-info">Submit</button>
 <% end %>
