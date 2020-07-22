@@ -29,22 +29,18 @@
 }
 
 .jumbotron {
-    background-image: asset-url("coffee.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 470px;
+   background-color:rgba(236, 243, 252, 0);
 }
 
 .jumbotron h1 {
-  color: white;
+  color: rgb(9, 4, 34);
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
 }
 
 .jumbotron p {
-    color:white;
+    color:rgb(9, 4, 34);
 }
 
 /* Sticky Footer Classes */
@@ -54,10 +50,51 @@ body {
   height: 100%;
 }
 
-#page-content {
+#page-content-edit{
   flex: 1 0 auto;
-   background-color:lightgrey; 
+    background-image: asset-url("nasa-Q1p7bh3SHj8-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   
+}
+#page-content-show{
+  flex: 1 0 auto;
+    background-image: asset-url("billy-huynh-W8KTS-mhFUE-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+#page-content-new{
+  flex: 1 0 auto;
+    background-image: asset-url("writing.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+#page-content-index{
+  flex: 1 0 auto;
+    background-image: asset-url("efe-kurnaz-RnCPiXixooY-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#page-content-home{
+  flex: 1 0 auto;
+  background-image: asset-url("coffee.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#page-content{
+  flex: 1 0 auto;
+    background-color: lightgrey;
 }
 
 #sticky-footer {
@@ -66,12 +103,13 @@ body {
 
 #card-header{
   color: rgb(224, 224, 224);
-  background-color: #343a40
+  background-color: rgb(52, 58, 64)
 }
 #card-header-new{
   padding: 1.3rem;
   color: rgb(224, 224, 224);
-  background-color: #343a40
+  background-color: rgb(52, 58, 64);
+  margin-bottom: 20px;
 }
 #card-footer{
   color: rgb(224, 224, 224);
@@ -79,4 +117,7 @@ body {
 #card-footer-new{
   padding: 1.3rem;
   color: rgb(224, 224, 224);
+}
+#home-container{
+  width: 400px;
 }

@@ -1,21 +1,21 @@
-<h1 class="text-center mt-4">Create a new article</h1>
-<div id="page-content">
+<h1 class="text-center mt-2">Create a new article</h1>
+<div id="page-content-new">
     <div class="row justify-content-md-center">
         <div class="col-8 mt-4">
-            <div class="card text-center shadow mb-3 bg-white rounded">
-                <div class="card-header font-italic" id="card-header-new">
-                </div>
-                <div class="card-body">
-                    <%= render 'form'%>
-                </div>
-                <div class="card-footer text-muted" id="card-footer-new">
-                </div>
+            <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)"">
+                <div class=" card-header font-italic" id="card-header-new">
+            </div>
+            <div class="card-body-new">
+                <%= render 'form'%>
+            </div>
+            <div class="card-footer text-muted" id="card-footer-new">
             </div>
         </div>
     </div>
-    <div class="row justify-content-md-center mb-3">
-        <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-success"%>
-    </div>
+</div>
+<div class="row justify-content-md-center mb-3">
+    <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-success"%>
+</div>
 </div>
 <footer id="sticky-footer" class="bg-dark text-white">
     <nav aria-label="breadcrumb">
