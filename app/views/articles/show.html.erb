@@ -1,16 +1,13 @@
-<h1 class="text-center mt-2">Showing article details</h1>
 <div id="page-content-show">
-    <div class="row justify-content-md-center">
+    <h2 class="text-center" id="h2"><%= @article.title%></h2>
+    <div class="row justify-content-md-center mt-4">
         <div class="col-8 mt-4">
             <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
                 <div class="card-header font-italic" id="card-header">
                     by Luis Holzer
                 </div>
-                <div class="card-body mb-3">
-                    <h5 class="card-title">
-                        <%= @article.title%>
-                    </h5>
-                    <p><%=@article.description%></p>
+                <div class="card-body text-left mb-3">
+                    <p><%=simple_format(@article.description)%></p>
                 </div>
                 <div class="mb-3">
                     <%=link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"%>
@@ -23,7 +20,7 @@
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-success mb-3"%>
+                <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-success mb-3"%>
             </div>
         </div>
     </div>

@@ -8,9 +8,7 @@
   letter-spacing: -1px;
   font-weight: bold;
 }
-#home-container{
-    margin-top: 25px;
-}
+
 
 #logo:hover{
  color: #fff;
@@ -33,7 +31,7 @@
 }
 
 .jumbotron h1 {
-  color: rgb(9, 4, 34);
+  color: rgb(199, 199, 199);
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
@@ -52,24 +50,26 @@ body {
 
 #page-content-edit{
   flex: 1 0 auto;
+    background-image: asset-url("patrick-mcmanaman-LN_g3qA8ohg-unsplash.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#page-content-show{
+  flex: 1 0 auto;
     background-image: asset-url("nasa-Q1p7bh3SHj8-unsplash.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+    
 }
-#page-content-show{
-  flex: 1 0 auto;
-    background-image: asset-url("billy-huynh-W8KTS-mhFUE-unsplash.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-}
+
 
 #page-content-new{
   flex: 1 0 auto;
-    background-image: asset-url("writing.jpg");
+    background-image: asset-url("nasa--hI5dX2ObAs-unsplash.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -86,7 +86,7 @@ body {
 
 #page-content-home{
   flex: 1 0 auto;
-  background-image: asset-url("coffee.jpg");
+  background: asset-url("the-new-york-public-library-yEauzeZU6xo-unsplash.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,4 +120,14 @@ body {
 }
 #home-container{
   width: 400px;
+}
+
+#sign_up_btn{
+  margin-left: 20px;
+}
+#h2{
+  color: white;
+  background-color:rgba(236, 243, 252, 0.1);
+  margin: 0px;
+  padding: 5px;
 }
