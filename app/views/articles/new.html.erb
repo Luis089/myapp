@@ -1,31 +1,32 @@
 <div id="page-content-new">
     <h2 class="text-center" id="h2">Create a new article</h2>
-    <div class="row justify-content-md-center">
-        <div class="col-8 mt-4">
-            <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)"">
-                <div class=" card-header font-italic" id="card-header-new">
-            </div>
-            <div class="card-body-new">
-                <%= render 'form'%>
-            </div>
-            <div class="card-footer text-muted" id="card-footer-new">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-8 mt-4">
+                <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
+                    <div class=" card-header font-italic" id="card-header-new">
+                    </div>
+                    <div class="card-body-new">
+                        <%= render 'form'%>
+                    </div>
+                    <div class="card-footer text-muted" id="card-footer-new">
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="row justify-content-md-center mb-3">
+            <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-success"%>
+        </div>
     </div>
-</div>
-<div class="row justify-content-md-center mb-3">
-    <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-success"%>
-</div>
-</div>
-<footer id="sticky-footer" class="bg-dark text-white">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
-            <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Create Article</li>
-        </ol>
-    </nav>
-    <div class="container text-center">
-        <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
-    </div>
-</footer>
+    <footer id="sticky-footer" class="bg-dark text-white">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+                <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
+                <li class="breadcrumb-item active" aria-current="page">Create Article</li>
+            </ol>
+        </nav>
+        <div class="container text-center">
+            <small>Copyright &copy; <%= link_to 'Luis Holzer' %></small>
+        </div>
+    </footer>

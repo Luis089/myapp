@@ -46,6 +46,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 #page-content-edit{
@@ -117,9 +118,6 @@ body {
 #card-footer-new{
   padding: 1.3rem;
   color: rgb(224, 224, 224);
-}
-#home-container{
-  width: 400px;
 }
 
 #sign_up_btn{
