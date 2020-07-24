@@ -70,7 +70,7 @@ body {
 
 #page-content-new{
   flex: 1 0 auto;
-    background-image: asset-url("nasa--hI5dX2ObAs-unsplash.jpg");
+    background-image: asset-url("jongsun-lee-F-pSZO_jeE8-unsplash.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,6 +88,13 @@ body {
 #page-content-home{
   flex: 1 0 auto;
   background: asset-url("the-new-york-public-library-yEauzeZU6xo-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page-content-new_u{
+  flex: 1 0 auto;
+  background: asset-url("spacex-PIOgkhaF3WA-unsplash.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,8 +132,8 @@ body {
 }
 #h2{
   color: white;
-  background-color:rgba(236, 243, 252, 0.1);
-  margin: 0px;
+  background-color:rgba(236, 243, 252, 0);
+  margin: 10px;
   padding: 5px;
 }
 

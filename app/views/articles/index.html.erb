@@ -3,7 +3,7 @@
     <div class="container">
         <% @articles.each do |article| %>
         <div class="row justify-content-md-center">
-            <div class="col-8 mt-4">
+            <div class="col-8 mb-3">
                 <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
                     <div class="card-header font-italic" id="card-header">
                         by <%= article.user.username%>
