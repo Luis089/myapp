@@ -1,0 +1,38 @@
+<div id="page-content-bloggers">
+    <h2 class="text-center" id="h2">Bloggers</h2>
+    <div class="container">
+        <% @users.each do |user| %>
+        <div class="row justify-content-md-center">
+            <div class="col-8 mb-3">
+                <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
+                    <div class="card-header font-italic" id="card-header">
+                        <%= link_to user.username, user%>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= link_to gravatar_for(user, size:150), user %>
+                        </h5>
+                        <p class="card-text">
+                            <%= pluralize(user.articles.count, "articles") %>
+                        </p>
+                        <%=link_to 'View profile', user, class: "btn btn-outline-success"%>
+                        <%=link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-info"%>
+                    </div>
+                    <div class="card-footer text-muted" id="card-footer">
+                        <small>Joined <%= time_ago_in_words(user.created_at) %> ago </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%end%>
+    </div>
+</div>
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
+        </ol>
+    </nav>
+    <%= render 'layouts/copyright' %>
+</footer>
