@@ -1,18 +1,24 @@
-<div id="page-content-bloggers">
+<div id="page-content">
     <h2 class="text-center" id="h2">Bloggers</h2>
+    <div class="flickr_pagination">
+        <div class="page_info mb-3">
+            <%= will_paginate @articles, :container => false %>
+        </div>
+    </div>
     <div class="container">
         <% @users.each do |user| %>
         <div class="row justify-content-md-center">
             <div class="col-8 mb-3">
-                <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
-                    <div class="card-header font-italic" id="card-header">
+                <div class="card text-center shadow mb-3" id="article-card"
+                    style="background-color:rgba(236, 243, 252, 0.8)">
+                    <div class="card-header font-italic font-weight-bold" id="card-header">
                         <%= link_to user.username, user%>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
                             <%= link_to gravatar_for(user, size:150), user %>
                         </h5>
-                        <p class="card-text">
+                        <p class="card-text text-success font-weight-bold">
                             <%= pluralize(user.articles.count, "articles") %>
                         </p>
                         <%=link_to 'View profile', user, class: "btn btn-outline-success"%>
@@ -26,7 +32,13 @@
         </div>
         <%end%>
     </div>
+    <div class="flickr_pagination">
+        <div class="page_info mb-4">
+            <%= will_paginate @articles, :container => false %>
+        </div>
+    </div>
 </div>
+
 <footer id="sticky-footer" class="bg-dark text-white">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

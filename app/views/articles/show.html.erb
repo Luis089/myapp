@@ -1,13 +1,15 @@
-<div id="page-content-show">
+<div id="page-content">
     <h2 class="text-center" id="h2"><%= @article.title%></h2>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-8">
-                <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
+                <div class="card text-center shadow mb-3" style="background-color:rgba(236, 243, 252, 0.8)"
+                    id="article-card">
                     <div class="card-header font-italic" id="card-header">
                         by <%= @article.user.username%>
                     </div>
-                    <div class="card-body text-left mb-3">
+                    <div class="card-body text-left mb-3" id="card-body">
+                        <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
                         <p><%=simple_format(@article.description)%></p>
                     </div>
                     <div class="mb-3">

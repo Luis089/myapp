@@ -1,14 +1,23 @@
-<div id="page-content-index">
+<div id="page-content">
     <h2 class="text-center" id="h2">Listing all articles</h2>
+    <div class="flickr_pagination">
+        <div class="page_info mb-3">
+            <%= will_paginate @articles, :container => false %>
+        </div>
+    </div>
     <%= render 'article' %>
+    <div class="flickr_pagination">
+        <div class="page_info mb-4">
+            <%= will_paginate @articles, :container => false %>
+        </div>
+    </div>
+    <footer id="sticky-footer" class="bg-dark text-white">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+                <li class="breadcrumb-item active" aria-current="page">Articles</li>
+            </ol>
+        </nav>
+        <%= render 'layouts/copyright' %>
+    </footer>
 </div>
-
-<footer id="sticky-footer" class="bg-dark text-white">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Articles</li>
-        </ol>
-    </nav>
-    <%= render 'layouts/copyright' %>
-</footer>

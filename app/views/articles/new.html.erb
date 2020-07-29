@@ -1,9 +1,10 @@
-<div id="page-content-new">
+<div id="page-content">
     <h2 class="text-center" id="h2">Create a new article</h2>
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-8">
-                <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
+                <div class="card text-center shadow mb-3" style="background-color:rgba(236, 243, 252, 0.8)"
+                    id="article-card">
                     <div class=" card-header font-italic" id="card-header-new">
                     </div>
                     <div class="card-body-new">
@@ -13,7 +14,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-md-center mb-3">
-                    <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-outline-warning"%>
+                    <%=link_to '[ Cancel and return to articles listing ]', articles_path, class: "btn btn-warning"%>
                 </div>
             </div>
         </div>

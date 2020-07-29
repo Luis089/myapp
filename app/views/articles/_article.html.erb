@@ -1,13 +1,16 @@
 <div class="container">
     <% @articles.each do |article| %>
     <div class="row justify-content-md-center">
-        <div class="col-8 mb-3">
-            <div class="card text-center shadow mb-3 rounded" style="background-color:rgba(236, 243, 252, 0.8)">
-                <div class="card-header font-italic" id="card-header">
-                    by <%= article.user.username%>
+        <div class="col-8 mb-2">
+            <div class="card text-center shadow mb-3" id="article-card"
+                style="background-color:rgba(236, 243, 252, 0.9)">
+                <div class="card-header font-italic font-weight-bold" id="card-header">
+                    <%if article.user %>
+                    by <%= link_to article.user.username, user_path(article.user) %>
+                    <%end%>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">
+                <div class="card-body" id="card-body">
+                    <h5 class="card-title font-weight-bold">
                         <%= link_to article.title, article_path(article), class:"text-success"%>
                     </h5>
                     <p class="card-text"><%=truncate(article.description, length: 100)%></p>
