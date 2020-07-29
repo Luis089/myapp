@@ -1,5 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+/* Logo Styling */
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -9,11 +11,13 @@
   font-weight: bold;
 }
 
-
 #logo:hover{
  color: #fff;
   text-decoration: none;
 }
+
+/* Navbar Styling */
+
 .navbar {
     background-color: black !important;
 }
@@ -26,6 +30,8 @@
   color: grey !important;
 }
 
+/* Jumbotron Styling */
+
 .jumbotron {
    background-color:rgba(236, 243, 252, 0);
 }
@@ -37,11 +43,7 @@
   letter-spacing: -1px;
 }
 
-.jumbotron p {
-    color:rgb(9, 4, 34);
-}
-
-/* Sticky Footer Classes */
+/*Page styling*/
 
 html,
 body {
@@ -49,6 +51,21 @@ body {
   width: 100%;
 }
 
+#sign_up_btn{
+  margin-left: 20px;
+}
+
+#container-u{
+  width: 450px;
+  padding: 1.3rem;
+  background-color: currentColor;
+  border-style: solid;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Page content styling */
 
 #page-content{
   flex: 1 0 auto;
@@ -82,9 +99,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Sticky footer */
 
 #sticky-footer {
   flex-shrink: none;
+}
+
+/* Copyright */
+
+#copyright{
+  padding: 0.3rem;
+}
+
+/* Card Styling */
+
+#article-card{
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+#card-body{
+  border-color: #fff;
 }
 
 #card-header{
@@ -97,22 +133,6 @@ body {
   border-top-right-radius: 30px;
 }
 
-#card-header-profile{
-  color: rgb(224, 224, 224);
-  background-color: rgb(52, 58, 64);
-  border-style: solid;
-  border-color: #fff;
-  border-width: 0.5px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
-
-#card-body{
-  border-color: #fff;
-  
-}
-
 #card-footer{
   color: rgb(224, 224, 224);
   background-color:rgba(91, 100, 109, 0.418);
@@ -121,12 +141,11 @@ body {
   border-style: solid;
   border-width: 0.5px;
   border-color: #fff;
-  
 }
 
-#sign_up_btn{
-  margin-left: 20px;
-}
+/* Precise styling */
+
+
 #h2{
   color: white;
   background-color:rgba(236, 243, 252, 0);
@@ -134,27 +153,7 @@ body {
   padding: 5px;
 }
 
-#copyright{
-  padding: 0.3rem;
-}
-
-#container-u{
-  width: 450px;
-  padding: 1.3rem;
-  background-color: currentColor;
-  border-style: solid;
-  border-radius: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-#article-card{
-  border-width: 0.5px;
-  border-style: solid;
-  border-radius: 30px;
-}
-
-//pagination
+/* Pagination */
 
 .flickr_pagination {
   text-align: center;
@@ -165,7 +164,7 @@ body {
     border-radius: 5px;
   }
   .flickr_pagination .disabled {
-    color: rgb(49, 82, 82) }
+    color: rgb(108, 182, 182) }
   .flickr_pagination .current {
     font-style: normal;
     font-weight: bold;

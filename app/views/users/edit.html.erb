@@ -24,7 +24,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
+            <li class="breadcrumb-item"><%= link_to "Bloggers", users_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit profile</li>
         </ol>
     </nav>
     <%= render 'layouts/copyright' %>
