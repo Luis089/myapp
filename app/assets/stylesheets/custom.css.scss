@@ -56,6 +56,19 @@ body {
   margin-left: 20px;
 }
 
+a{
+  color: #5cb4f0;
+}
+
+a:hover{
+  color: #36b947;
+  text-decoration: none;
+}
+
+#navbarDropdown_user{
+  font-style: oblique;
+}
+
 #container-u{
   width: 450px;
   padding: 1.3rem;
@@ -116,9 +129,11 @@ body {
 /* Card Styling */
 
 #article-card{
-  border-width: 0.5px;
+  border-width: 0.1px;
   border-style: solid;
   border-radius: 30px;
+  border-color: white;
+  background-color:rgb(185, 190, 196) !important;
 }
 
 #card-body{
@@ -127,7 +142,7 @@ body {
 
 #card-header{
   color: rgb(224, 224, 224);
-  background-color: rgb(52, 58, 64);
+  background-color: rgb(55, 66, 77);
   border-style: solid;
   border-color: #fff;
   border-width: 0.5px;
@@ -136,8 +151,8 @@ body {
 }
 
 #card-footer{
-  color: rgb(224, 224, 224);
-  background-color:rgba(91, 100, 109, 0.418);
+  color: rgb(16, 2, 44) !important; 
+  background-color:rgb(101, 129, 158);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-style: solid;

@@ -1,5 +1,9 @@
 <div id="page-content">
-    <h2 class="text-center" id="h2">Listing all articles</h2>
+    <% if logged_in?%>
+    <h2 class="text-center" id="h2">Your feed</h2>
+    <%else%>
+    <h2 class="text-center" id="h2">Articles</h2>
+    <%end%>
     <div class="flickr_pagination">
         <div class="page_info mb-3">
             <%= will_paginate @articles, :container => false %>

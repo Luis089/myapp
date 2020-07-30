@@ -4,27 +4,23 @@
     </h2>
     <div class="container mt-2 mb-3">
         <div class="row justify-content-md-center">
-            <div class="col-8 mb-2">
-                <div class="card text-center shadow mb-3" style="background-color:rgba(236, 243, 252, 0.8)"
-                    id="article-card">
+            <div class="col-5 mb-2">
+                <div class="card text-center shadow mb-3" id="article-card">
                     <div class="card-header font-italic font-weight-bold" id="card-header">
                         <%= @user.username%>'s profile
                     </div>
                     <div class="card-img-top-left m-4">
                         <%= gravatar_for @user, size: 130%>
                     </div>
+                    <%if logged_in? && @user == current_user%>
                     <div class="text-center">
                         <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-success m-2" %>
                     </div>
-                    <div class="card-body" id="card-body">
+                    <%end%>
+                    <div class="card-body" id="card-body-u">
                         <h5 class="card-title">
                             Your profile info
                         </h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up
-                            the
-                            bulk of
-                            the card's content.
-                        </p>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">

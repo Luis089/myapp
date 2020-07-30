@@ -9,8 +9,7 @@
         <% @users.each do |user| %>
         <div class="row justify-content-md-center">
             <div class="col-8 mb-3">
-                <div class="card text-center shadow mb-3" id="article-card"
-                    style="background-color:rgba(236, 243, 252, 0.8)">
+                <div class="card text-center shadow mb-3" id="article-card">
                     <div class="card-header font-italic font-weight-bold" id="card-header">
                         <%= link_to user.username, user%>
                     </div>
@@ -22,7 +21,9 @@
                             <%= pluralize(user.articles.count, "articles") %>
                         </p>
                         <%=link_to 'View profile', user, class: "btn btn-outline-success"%>
+                        <%if logged_in? && user == current_user%>
                         <%=link_to 'Edit profile', edit_user_path(user), class: "btn btn-outline-info"%>
+                        <%end%>
                     </div>
                     <div class="card-footer text-muted" id="card-footer">
                         <small>Joined <%= time_ago_in_words(user.created_at) %> ago </small>
