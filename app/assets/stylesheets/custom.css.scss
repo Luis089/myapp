@@ -1,3 +1,5 @@
+$enable-shadows: true;
+
 @import 'bootstrap/dist/css/bootstrap';
 
 /* Logo Styling */
@@ -63,10 +65,6 @@ a{
 a:hover{
   color: #36b947;
   text-decoration: none;
-}
-
-#navbarDropdown_user{
-  font-style: oblique;
 }
 
 #container-u{
@@ -203,5 +201,12 @@ a:hover{
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
+
+.zoom {
+  transition: transform .1s;
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
 
 
