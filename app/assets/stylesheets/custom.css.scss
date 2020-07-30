@@ -16,6 +16,7 @@
   text-decoration: none;
 }
 
+
 /* Navbar Styling */
 
 .navbar {
@@ -23,11 +24,11 @@
 }
 
 .nav-link{
-    color: grey !important;
+    color: rgb(202, 202, 202) !important;
 }
 
 .navbar-dark .navbar-toggler-icon{
-  color: grey !important;
+  color: rgb(202, 202, 202) !important;
 }
 
 /* Jumbotron Styling */
@@ -37,7 +38,7 @@
 }
 
 .jumbotron h1 {
-  color: rgb(199, 199, 199);
+  color: rgb(255, 255, 255);
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
@@ -69,7 +70,7 @@ body {
 
 #page-content{
   flex: 1 0 auto;
-    background-color: rgba(9, 150, 72, 0.925);
+    background-color: #1f1b22;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,7 +85,7 @@ body {
 }
 #page-content-show-u{
   flex: 1 0 auto;
-    background-color: rgba(9, 150, 72, 0.925);
+    background-color: #1f1b22;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,7 +95,7 @@ body {
 }
 #page-content-show_u_articles{
    flex: 1 0 auto;
-    background-color: rgba(8, 100, 50, 0.952);
+    background-color: #49444c;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,7 +109,8 @@ body {
 /* Copyright */
 
 #copyright{
-  padding: 0.3rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 5px;
 }
 
 /* Card Styling */
