@@ -1,0 +1,29 @@
+<div id="page-content">
+    <h2 class="text-center" id="h2">Show Categories</h2>
+    <div class="container">
+        <div class="flickr_pagination">
+            <div class="page_info mb-3">
+                <%= will_paginate @categories, :container => false %>
+            </div>
+        </div>
+        <% @categories.each do |category| %>
+        <div class="row justify-content-md-center">
+            <div class="col-4 mb-2">
+                <div class="card text-center shadow mb-3" id="article-card"
+                    style="background-color:rgba(236, 243, 252, 0.9)">
+                    <div class="card-body" id="card-body">
+                        <h5 class="card-title font-weight-bold">
+                            <%= link_to category.name, category_path(category), class:"text-success"%>
+                        </h5>
+                    </div>
+                    <div class="card-footer text-muted" id="card-footer">
+                        <small>Created <%= time_ago_in_words(category.created_at) %> ago -
+                            Edited <%= time_ago_in_words(category.updated_at) %> ago
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%end%>
+    </div>
+</div>
