@@ -29,6 +29,11 @@
         </div>
         <%end%>
     </div>
+    <div class="flickr_pagination">
+        <div class="page_info mb-3">
+            <%= will_paginate @categories, :container => false %>
+        </div>
+    </div>
 </div>
 <footer id="sticky-footer" class="bg-dark text-white">
     <nav aria-label="breadcrumb">
