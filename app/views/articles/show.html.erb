@@ -7,10 +7,14 @@
             <div class="col-8">
                 <div class="card text-center shadow mb-3" id="article-card">
                     <div class="card-header font-italic" id="card-header">
-                        by <%= @article.user.username%>
-                    </div>
-                    <div class="card-body text-left mb-3" id="card-body">
+                        <div class="mb-2"> by <%= @article.user.username%></div>
                         <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
+                        <div class="mt-2"><% if @article.categories.any? %>
+                            <%= render @article.categories%>
+                            <%end%>
+                        </div>
+                    </div>
+                    <div class="card-body text-left" id="card-body">
                         <p><%=simple_format(@article.description)%></p>
                     </div>
                     <%if logged_in? && (@article.user == current_user || current_user.admin?)%>

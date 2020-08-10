@@ -19,8 +19,8 @@
             <div class="form-group row">
                 <%= f.label :category, class:"col-2 col-form-label" %>
                 <div class="col-10">
-                    <%= f.collection_select(:category_ids, Category.all, :id, :name, 
-                { promt: "Make your selection from the list below (can be empty)" }, {multiple: true}) %>
+                    <%= f.collection_select :category_ids, Category.all, :id, :name, {prompt: "Select from the list below"},
+                 {multiple: true, size: 3, class:"custom-select shadow rounded"}%>
                 </div>
             </div>
 
