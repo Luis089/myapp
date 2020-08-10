@@ -8,10 +8,11 @@
                 <div class="card text-center shadow mb-3" id="article-card">
                     <div class="card-header font-italic font-weight-bold" id="card-header">
                         <%= @user.username%>'s profile
+                        <div class="card-img-top-left m-4 zoom">
+                            <%= gravatar_for @user, size: 130%>
+                        </div>
                     </div>
-                    <div class="card-img-top-left m-4 zoom">
-                        <%= gravatar_for @user, size: 130%>
-                    </div>
+
                     <%if logged_in? && @user == current_user%>
                     <div class="text-center">
                         <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-success m-2" %>

@@ -1,0 +1,34 @@
+<div id="page-content-show-u">
+    <h2 class="text-center text-light mt-4">
+        Category: <%= @category.name%> edit
+    </h2>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <div class="card text-center shadow mb-3" id="article-card">
+                    <div class=" card-header font-italic p-4" id="card-header"></div>
+                    <div class="card-body">
+                        <%= render 'form'%>
+                    </div>
+                    <div class="card-footer text-muted p-4" id="card-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <%=link_to '[ Return to all categories ]', categories_path, class: "btn btn-info m-3"%>
+            <%=link_to '[ Return to homepage ]', root_path, class: "btn btn-warning m-3"%>
+        </div>
+    </div>
+</div>
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item"><%= link_to "Categories", categories_path%></li>
+            <li class="breadcrumb-item"><%= link_to  "#{@category.name}", category_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit: <%="#{@category.name}"%> </li>
+        </ol>
+    </nav>
+    <%= render 'layouts/copyright' %>
+</footer>

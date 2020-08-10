@@ -15,6 +15,9 @@
                         <h5 class="card-title font-weight-bold">
                             <%= link_to category.name, category_path(category), class:"text-success"%>
                         </h5>
+                        <p class="card-text">
+                            <%= pluralize(category.articles.count, "article") %>
+                        </p>
                     </div>
                     <div class="card-footer text-muted" id="card-footer">
                         <small>Created <%= time_ago_in_words(category.created_at) %> ago -
@@ -27,3 +30,12 @@
         <%end%>
     </div>
 </div>
+<footer id="sticky-footer" class="bg-dark text-white">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
+            <li class="breadcrumb-item active" aria-current="page">Show Categories</li>
+        </ol>
+    </nav>
+    <%= render 'layouts/copyright' %>
+</footer>

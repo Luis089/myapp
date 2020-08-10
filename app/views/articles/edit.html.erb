@@ -5,7 +5,7 @@
             <div class="col-8">
                 <div class="card text-center shadow mb-3" id="article-card">
                     <div class="card-header font-italic" id="card-header">
-                        by Luis Holzer
+                        by <%= @article.user.username%>
                     </div>
                     <div class="card-body">
                         <%= render 'form', class: "justify-content-md-center"%>
@@ -29,7 +29,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
             <li class="breadcrumb-item"><%= link_to "Articles", articles_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Edit Article</li>
+            <li class="breadcrumb-item active" aria-current="page">Edit: <%="#{@article.title}"%></li>
         </ol>
     </nav>
     <%= render 'layouts/copyright' %>

@@ -4,11 +4,11 @@
         <div class="row justify-content-md-center">
             <div class="col-10">
                 <div class="card text-center shadow mb-3" id="article-card">
-                    <div class=" card-header font-italic" id="card-header-new"></div>
+                    <div class=" card-header p-4 mb-3" id="card-header"></div>
                     <div class="card-body-new">
                         <%= render 'form'%>
                     </div>
-                    <div class="card-footer text-muted" id="card-footer-new">
+                    <div class="card-footer p-4" id="card-footer">
                     </div>
                 </div>
                 <div class="row justify-content-md-center mb-3">
@@ -24,7 +24,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><%= link_to "Home", root_path%></li>
             <li class="breadcrumb-item"><%= link_to "Bloggers", users_path%></li>
-            <li class="breadcrumb-item active" aria-current="page">Edit profile</li>
+            <li class="breadcrumb-item active" aria-current="page">Edit <%="#{@user.username}"%>'s profile</li>
         </ol>
     </nav>
     <%= render 'layouts/copyright' %>

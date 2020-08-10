@@ -18,7 +18,7 @@
                             <%= link_to gravatar_for(user, size:150), user %>
                         </h5>
                         <p class="card-text text-success font-weight-bold">
-                            <%= pluralize(user.articles.count, "articles") %>
+                            <%= pluralize(user.articles.count, "article") %>
                         </p>
                         <%=link_to 'View profile', user, class: "btn btn-outline-success"%>
                         <%if logged_in? %>
